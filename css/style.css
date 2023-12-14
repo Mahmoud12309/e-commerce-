@@ -25,6 +25,41 @@
 .padding {
   padding: 20px 40px;
 }
+.oclock h3{
+  font-size: 45px;
+}
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+  height: 100px;
+}
+.btn a {
+  color: var(--Text);
+  background-color: var(--Button2);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  box-shadow: -20px 8px 20px rgb(213 14 14 / 97%) inset;
+  transition: .3s;
+  width: 150px;
+  text-align: center;
+}
+.hr-div {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+.hr {
+  width: 80%;
+  border: 0;
+  height: 1px;
+  background: #00000047;
+}
 .head {
   background-color: #000;
   display: flex;
@@ -58,7 +93,7 @@
 
 header {
   width: 100%;
-  position: relative;
+  position: sticky;
   top: 0;
   z-index: 1000;
   left: 0;
@@ -67,6 +102,7 @@ header {
   justify-content: space-between;
   right: 0;
   border: 1px solid #0000001a;
+  background-color: #fff;
 }
 header .logo {
   color: var(--Text2);
@@ -187,9 +223,12 @@ header .nav .icons a {
 .home .right .container .margin .item .text .btn {
   position: relative;
   color: var(--Text);
+  margin: 0;
   width: 100px;
+  height: auto;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   transition: 0.3s;
 }
 .home .right .container .margin .item .text .btn::before {
@@ -219,18 +258,20 @@ header .nav .icons a {
 
 .shop .head-shop h4 {
   position: relative;
-  width: 100px;
+  width: calc(auto + 10px);
   color: var(--Secondary-2);
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
   transition: 0.3s;
 }
 .shop .head-shop h4 span {
   width: 15px;
   height: 30px;
+  margin-right: 15px;
 }
 .shop .nav-shop {
+  height: 70px;
+  margin: 0 0 65px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -292,6 +333,7 @@ header .nav .icons a {
   margin: 20px 0;
   display: grid;
   grid-template-columns: repeat(auto-fill,285px);
+  place-content: center;
   gap: 45px 5px;
 }
 .shop .cards-shop .card-shop {
@@ -400,4 +442,120 @@ header .nav .icons a {
 .shop .cards-shop .card-shop .stars-count .order i{
   color: var(--Secondary-2);
   font-size: 16px;
+}
+.Categories{
+  margin: 80px 0;
+}
+
+.Categories .cards-card-shop{
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Categories .cards-card-shop .cards_card {
+  padding: 20px;
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 5px;
+  border: 1px solid rgba( 0, 0,0, 30%);
+  outline: none;
+  cursor: pointer;
+}
+.Categories .cards-card-shop .cards_card.active {
+  background: var(--Secondary-2);
+  border: 1px solid var(--Secondary-2);
+  color: #fff;
+}
+.best-selling .btn{
+  width: auto;
+}
+.headphone{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.headphone .item-headphone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  width: 100%;
+  padding: 0 25px;
+}
+.headphone .item-headphone .text-headphone {
+  color: #fff;
+  height: 100%;
+  padding: 40px 0;
+}
+.headphone .item-headphone .text-headphone h4{
+  color: var(--Button1);
+  margin: 20px 0;
+}
+.headphone  .text-headphone h2 {
+  font-size: 60px;
+  margin: 10px 0;
+  word-spacing: 5px;
+}
+.headphone .text-headphone .counter-hours{
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+.headphone .text-headphone .counter-hours .oc {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 50%;
+  background-color: var(--Secondary);
+  color: #000;
+  margin-right: 15px;
+}
+.headphone .text-headphone .counter-hours .oc h5{
+  font-size: 20px;
+}
+.headphone .text-headphone .counter-hours .oc p{
+  font-size: 12px;
+}
+.headphone .text-headphone .btn {
+  justify-content: flex-start;
+}
+.headphone .text-headphone .btn a {
+  position: relative;
+  color: #363738;
+  background-color: var(--Button1);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: -2px -1px 20px 4px rgb(23 143 8 / 97%);
+  transition: .3s;
+  width: 150px;
+  text-align: center;
+  overflow: hidden;
+}
+.headphone .text-headphone .btn a:hover {
+  color: #fff;
+  box-shadow: -2px -1px 20px 7px rgb(23 143 8 / 97%), 1px 1px 20px 0px #ffffff9e inset;
+}
+.headphone .text-headphone .btn a::before {
+  content: "";
+  position: absolute;
+  inset: -34%;
+  width: 20px;
+  height: 100px;
+  background-color: #ffffffc2;
+  transform: skewX(308deg) translate(-50%, -50%);
+  transition: .5s;
+}
+.headphone .text-headphone .btn a:hover::before {
+  inset: 110%;
 }
